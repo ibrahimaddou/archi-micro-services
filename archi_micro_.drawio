@@ -1,0 +1,131 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.1.1">
+  <diagram name="Architecture Microservices" id="P5nuuktu7dGVsVR7irLk">
+    <mxGraphModel dx="2246" dy="1191" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3498db;strokeColor=#2980b9;fontColor=#FFFFFF;fontSize=14;" value="&lt;b&gt;CLIENT&lt;/b&gt;&lt;br&gt;Navigateur&lt;br&gt;Mobile" vertex="1">
+          <mxGeometry height="100" width="140" x="10" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e74c3c;strokeColor=#c0392b;fontColor=#FFFFFF;fontSize=12;strokeWidth=3;" value="&lt;b&gt;GATEWAY&lt;/b&gt;&lt;br&gt;Spring Cloud Gateway&lt;br&gt;Port: 8888&lt;br&gt;─────────&lt;br&gt;&lt;b&gt;Rôles:&lt;/b&gt;&lt;br&gt;• Routage&lt;br&gt;• Load Balancing" vertex="1">
+          <mxGeometry height="140" width="180" x="324" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9b59b6;strokeColor=#8e44ad;fontColor=#FFFFFF;fontSize=12;strokeWidth=3;" value="&lt;b&gt;DISCOVERY SERVICE&lt;/b&gt;&lt;br&gt;Eureka Server&lt;br&gt;Port: 8761&lt;br&gt;─────────&lt;br&gt;Annuaire des&lt;br&gt;microservices" vertex="1">
+          <mxGeometry height="120" width="200" x="540" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#16a085;strokeColor=#138d75;fontColor=#FFFFFF;fontSize=12;strokeWidth=3;" value="&lt;b&gt;CONFIG SERVICE&lt;/b&gt;&lt;br&gt;Config Server&lt;br&gt;Port: 8888&lt;br&gt;─────────&lt;br&gt;Configuration&lt;br&gt;centralisée (Git)" vertex="1">
+          <mxGeometry height="120" width="200" x="600" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#27ae60;strokeColor=#229954;fontColor=#FFFFFF;fontSize=12;strokeWidth=2;" value="&lt;b&gt;CUSTOMER SERVICE&lt;/b&gt;&lt;br&gt;Port: 8081&lt;br&gt;─────────&lt;br&gt;Gestion clients&lt;br&gt;DB: customers-db&lt;br&gt;&lt;br&gt;Spring Data JPA&lt;br&gt;REST Repositories" vertex="1">
+          <mxGeometry height="140" width="200" x="1280" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f39c12;strokeColor=#d68910;fontColor=#FFFFFF;fontSize=12;strokeWidth=2;" value="&lt;b&gt;INVENTORY SERVICE&lt;/b&gt;&lt;br&gt;Port: 8082&lt;br&gt;─────────&lt;br&gt;Gestion produits&lt;br&gt;DB: products-db&lt;br&gt;&lt;br&gt;Spring Data JPA&lt;br&gt;REST Repositories" vertex="1">
+          <mxGeometry height="140" width="200" x="1300" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e67e22;strokeColor=#ca6f1e;fontColor=#FFFFFF;fontSize=12;strokeWidth=2;" value="&lt;b&gt;BILLING SERVICE&lt;/b&gt;&lt;br&gt;Port: 8083&lt;br&gt;─────────&lt;br&gt;Facturation&lt;br&gt;DB: billing-db&lt;br&gt;&lt;br&gt;OpenFeign&lt;br&gt;Communication REST" vertex="1">
+          <mxGeometry height="140" width="200" x="1370" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#34495e;strokeColor=#2c3e50;fontColor=#FFFFFF;fontSize=12;strokeWidth=2;" value="&lt;b&gt;KAFKA BROKER&lt;/b&gt;&lt;br&gt;─────────&lt;br&gt;Message Broker&lt;br&gt;&lt;br&gt;Communication&lt;br&gt;asynchrone" vertex="1">
+          <mxGeometry height="120" width="180" x="1370" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-10" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;" target="AefZsiKrZ_aaAVeUctk8-3" value="HTTP Request">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-11" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;strokeColor=#9b59b6;dashed=1;dashPattern=5 5;" target="AefZsiKrZ_aaAVeUctk8-4" value="2. Demande adresse">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-12" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;strokeColor=#16a085;dashed=1;dashPattern=5 5;" target="AefZsiKrZ_aaAVeUctk8-5" value="Config">
+          <mxGeometry relative="1" x="-0.2183" y="-5" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="410" y="880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-13" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;" target="AefZsiKrZ_aaAVeUctk8-6" value="3. Route Request">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="350" />
+              <mxPoint x="1120" y="350" />
+              <mxPoint x="1120" y="140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-14" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="AefZsiKrZ_aaAVeUctk8-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-15" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" target="AefZsiKrZ_aaAVeUctk8-8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cxRCxDDS1zP5gj6VFaVD-1" connectable="0" parent="AefZsiKrZ_aaAVeUctk8-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Text" vertex="1">
+          <mxGeometry relative="1" x="-0.918" y="4" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-16" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;strokeColor=#9b59b6;dashed=1;dashPattern=3 3;" target="AefZsiKrZ_aaAVeUctk8-4" value="1. Register">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1080" y="110" />
+              <mxPoint x="1080" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-17" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;strokeColor=#9b59b6;dashed=1;dashPattern=3 3;" target="AefZsiKrZ_aaAVeUctk8-4" value="1. Register">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-18" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;strokeColor=#9b59b6;dashed=1;dashPattern=3 3;" target="AefZsiKrZ_aaAVeUctk8-4" value="1. Register">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="730" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-19" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;strokeColor=#e74c3c;dashed=1;dashPattern=3 3;startArrow=classic;startFill=1;" target="AefZsiKrZ_aaAVeUctk8-7" value="OpenFeign (REST)">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1400" y="270" />
+              <mxPoint x="1400" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-20" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;strokeColor=#e74c3c;dashed=1;dashPattern=3 3;" target="AefZsiKrZ_aaAVeUctk8-6" value="REST API">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1620" y="780" />
+              <mxPoint x="1620" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-21" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;strokeColor=#e74c3c;dashed=1;dashPattern=3 3;" target="AefZsiKrZ_aaAVeUctk8-7" value="REST API">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1540" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AefZsiKrZ_aaAVeUctk8-22" edge="1" parent="1" source="AefZsiKrZ_aaAVeUctk8-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=11;strokeColor=#34495e;dashed=1;dashPattern=5 5;" target="AefZsiKrZ_aaAVeUctk8-9" value="Messages async">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1460" y="830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cxRCxDDS1zP5gj6VFaVD-2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" value="Architecture Microservices avec Spring Cloud" vertex="1">
+          <mxGeometry height="40" width="800" x="540" y="1090" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
